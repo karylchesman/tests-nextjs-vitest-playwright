@@ -1,7 +1,7 @@
 import { sanitizeStr } from "@/utils/sanitize-str";
+import { Todo } from "../schemas/todo.contract";
 import { validateTodoDescription } from "../schemas/validate-todo-description";
 import { makeNewTodo } from "./make-new-todo";
-import { Todo } from "../schemas/todo.contract";
 
 type TMakeValidatedTodoResult =
   | {
