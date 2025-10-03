@@ -3,15 +3,17 @@ import { Todo } from "../schemas/todo.contract";
 import { validateTodoDescription } from "../schemas/validate-todo-description";
 import { makeNewTodo } from "./make-new-todo";
 
-type TMakeValidatedTodoResult =
-  | {
-      success: true;
-      data: Todo;
-    }
-  | {
-      success: false;
-      errors: string[];
-    };
+export type ValidTodo = {
+  success: true;
+  data: Todo;
+};
+
+export type InvalidTodo = {
+  success: false;
+  errors: string[];
+};
+
+type TMakeValidatedTodoResult = ValidTodo | InvalidTodo;
 
 export function makeValidatedTodo(
   description: string
