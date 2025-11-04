@@ -55,7 +55,7 @@ describe("makeValidatedTodo (unit)", () => {
     const result = makeValidatedTodo(description) as ValidTodo;
 
     expect(result.success).toBe(true);
-    expect(result.data).toStrictEqual(
+    expect(result.todo).toStrictEqual(
       expect.objectContaining({
         id: "any-id",
         description,

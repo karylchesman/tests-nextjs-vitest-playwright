@@ -5,7 +5,7 @@ import { makeNewTodo } from "./make-new-todo";
 
 export type ValidTodo = {
   success: true;
-  data: Todo;
+  todo: Todo;
 };
 
 export type InvalidTodo = {
@@ -24,7 +24,7 @@ export function makeValidatedTodo(
   if (validatedDescription.success) {
     return {
       success: true,
-      data: makeNewTodo(cleanDescription),
+      todo: makeNewTodo(cleanDescription),
     };
   }
 
