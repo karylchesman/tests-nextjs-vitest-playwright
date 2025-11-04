@@ -1,11 +1,8 @@
 import * as sanitizeStrModule from "../../../utils/sanitize-str";
+import { InvalidTodo, ValidTodo } from "../schemas/todo.contract";
 import * as validateTodoDescriptionModule from "../schemas/validate-todo-description";
 import * as makeNewTodoModule from "./make-new-todo";
-import {
-  InvalidTodo,
-  makeValidatedTodo,
-  ValidTodo,
-} from "./make-validated-todo";
+import { makeValidatedTodo } from "./make-validated-todo";
 
 const makeMocks = (description = "New Todo") => {
   const sanitizeStrSpy = vi
